@@ -40,7 +40,7 @@ public struct Token: Hashable, Decodable {
         self.isNative = false
     }
 
-    public let _tags: [String]
+    public let _tags: [String]?
 
     public let chainId: Int?
     public let address: String
