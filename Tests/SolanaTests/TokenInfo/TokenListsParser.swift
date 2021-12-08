@@ -20,7 +20,8 @@ public class TokensListParser {
         // map tags
         list.tokens = list.tokens.map {
             var item = $0
-            item.tags = item._tags.map {
+            let itemTags = item._tags ?? []
+            item.tags = itemTags.map {
                 return try! list.tags[$0] ?? TokenTag(name: $0, description: $0)
             }
             return item
